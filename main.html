@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.6.1.slim.js"
+      integrity="sha256-tXm+sa1uzsbFnbXt8GJqsgi2Tw+m4BLGDof6eUPjbtk="
+      crossorigin="anonymous"
+    ></script>
+    <title>Modules</title>
+  </head>
+  <style>
+    body{
+  overflow-x: hidden;
+}
+/* Scrollbar styling */ 
+  ::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+  ::-webkit-scrollbar-thumb {
+  background: #817e7e;
+  border: 0px none #ffffff;
+}
+  ::-webkit-scrollbar-thumb:hover {
+  background: #9b9999;
+}
+  ::-webkit-scrollbar-track {
+  background: #d4d1d1;
+  border: 0px none #ffffff;
+  border-radius: 50px;
+}
+
+/* Media Queries */ 
+  @media only screen and (max-width: 991px){
+    .container{
+      display: flex;
+      flex-wrap:wrap;
+  }
+}
+    
+  @media only screen and (max-width: 800px){
+    
+    .container{
+      display: flex;
+      flex-wrap:wrap;
+  }
+    
+}
+
+  @media only screen and (max-width: 600px) {
+      .container{
+        display: flex;
+        flex-flow: column
+  }
+      .form-select{
+        width: 200px;
+  } 
+ }
+</style>
+<body>
+    <nav class="navbar navbar-dark bg-primary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">
+          <img
+            src="/Media/1743.png"
+            alt="Logo"
+            width="160"
+            height="90"
+            class="d-inline-block align-text-top"
+          />
+        </a>
+      </div>
+    </nav>
+    <div
+      class="container d-flex align-items-center justify-content-center mt-4"
+    >
+      <h1 class="display-6">Sélectionnez votre filière</h1>
+    </div>
+    
+    <div
+      class="container d-flex align-items-center justify-content-center mt-4"
+      style="margin-top: 1px"
+    >
+      <select
+        class="form-select w-25"
+        aria-label="Default select example"
+        name="1select"
+        id="1select"
+        onchange="changeFiliere()"
+
+      >
+        <option selected disabled>--Sélectionnez votre filière--</option>
+        <option value="1">Développement Digital</option>
+        <option value="2">
+          TSGE:Technicien Spécialisé en Gestion des Entreprises
+        </option>
+        <option value="3">Technicien Spécialisé en Génie Civil</option>
+      </select>
+      <select
+        class="form-select w-25 m-2"
+        aria-label="Default select example"
+        name="2select"
+        id="2select"
+        
+      ></select>
+    </div>
+      <div class="row justify-content-center text-center" id="cards"></div>
+    <script>
+        $(document).ready(function(){
+            $("#2select").on('change',function(){
+                $("#cards").html("")
+                var firstSelectBox = document.getElementById("1select");
+                var secondSelectBox = document.getElementById("2select");
+                
+                if(secondSelectBox.value == "Value 1" && firstSelectBox.value==1){
+                    var module = [
+                    {
+                        text: "M101",
+                        titre: "P-1 Développer des sites web statiques",
+                        comp: `jhdqkshdk <br>
+                        jhqodlhjs <br>
+                        hdjqlihsu <br> 
+                        gbfbxdbssfs <br> 
+                        ddd v  ddd`,
+                        img: "/Media/diplome-technicien-specialise-en-developpement-informatique-ibegis.jpg",
+                      }
+                    ,{
+                        text: "M101",
+                        titre: "P-2 Développer des sites web statiques",
+                        comp: `jhdqkshdk <br>
+                        jhqodlhjs <br>
+                        hdjqlihsu <br> 
+                        gbfbxdbssfs <br> 
+                        ddd v  ddd`,
+                        img: "/Media/diplome-technicien-specialise-en-developpement-informatique-ibegis.jpg",
+                      }
+                    ,{
+                        text: "M101",
+                        titre: "P-3 Développer des sites web statiques",
+                        comp: `jhdqkshdk <br>
+                        jhqodlhjs <br>
+                        hdjqlihsu <br> 
+                        gbfbxdbssfs <br> 
+                        ddd v  ddd`,
+                        img: "/Media/diplome-technicien-specialise-en-developpement-informatique-ibegis.jpg",
+                      }
+                    ,{
+                        text: "M101",
+                        titre: "TP en Développer des sites web statiques",
+                        comp: `jhdqkshdk <br>
+                        jhqodlhjs <br>
+                        hdjqlihsu <br> 
+                        gbfbxdbssfs <br> 
+                        ddd v  ddd`,
+                        img: "/Media/diplome-technicien-specialise-en-developpement-informatique-ibegis.jpg",
+                      },{
+                        text: "M101",
+                        titre: "P-3 Développer des sites web statiques",
+                        comp: `jhdqkshdk <br>
+                        jhqodlhjs <br>
+                        hdjqlihsu <br> 
+                        gbfbxdbssfs <br> 
+                        ddd v  ddd`,
+                        img: "/Media/diplome-technicien-specialise-en-developpement-informatique-ibegis.jpg",
+                      }
+                      ]
+    
+                }else if(secondSelectBox.value == "Value 9" && firstSelectBox.value==2){
+                    var module = [
+                        {
+                            text: "M102",
+                            titre: "PIE",
+                            comp: `jhdqkshdk <br>
+                            jhqodlhjs <br>
+                            hdjqlihsu <br> 
+                            gbfbxdbssfs <br> 
+                            ddd v  ddd`,
+                            img:"/Media/business-team-discussing-ideas-startup_74855-4380.jpg"
+                            
+                          }]
+                }
+            if(module){
+              for (var i = 0, l = module.length; i < l; i++) {
+                  var mod = module[i];
+                  $("#cards").append(`<div class="card col-md-6 col-lg-4 col-xl-3 m-3" style="width: 20rem" >
+                      <img
+                        src=`+mod.img+`
+                        class="card-img-top"
+                        alt="..."
+                       
+                      />
+                      <div class="card-body">
+                        <h5 class="card-title">`+mod.text+`</h5>
+                        <p class="card-text">`+mod.titre+"\n"+mod.comp+`</p>
+                        <a href=`+mod.download+` class="btn btn-primary" style="border-radius: 30px">Download</a>
+                        <a href=`+mod.preview+` class="btn btn-primary" style="border-radius: 30px">Preview</a>
+                      </div>
+                    </div>`)
+              
+              }  
+          } else{
+            $("#cards").html("")
+          }   
+            });
+            
+        });
+    </script>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,95 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-attachment:fixed;
+  background-repeat: no-repeat;
+  background-size:cover;
+  background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url("/Media/a+.png");
+  background-position: top;
+}
+@media only screen and (max-width: 600px) {
+  img{
+    position: relative;
+    height: 150px;
+    width: 260px;
+  }
+  body{
+    background-image: linear-gradient( rgba(0, 0, 0, 0.63), rgba(0, 0, 0, 0.63) ), url("/Media/woman-wearing-regalia-holding-her-degree-graduation_53876-128811.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-size: smaller;
+    
+  }
+  button{
+    background-color:transparent !important;
+    color: yellow !important;
+    border-color: yellow !important;
+  }
+  button:hover{
+    background-color:rgb(255, 255, 0) !important;
+    color: black !important;
+  }
+  .ofppt:hover{
+     background-color: yellow !important;
+  }
+}
+
+
+/* footer overview style */
+.footer-basic {
+padding:60px 0;
+background-color:transparent;
+color:#4b4c4d;
+user-select: none;
+}
+/* footer social overview style */
+.footer-basic .social {
+text-align:center;
+padding-bottom:10px;
+}
+
+/* Socials border styling */
+.footer-basic .social > a {
+font-size:24px;
+width:40px;
+height:40px;
+line-height:40px;
+display:inline-block;
+text-align:center;
+border-radius:50%;
+border:1px solid rgba(204, 204, 204, 0.692);
+margin:0 8px;
+color:inherit;
+opacity:0.75;
+
+}
+/*Facebook style*/
+.facebook:hover{
+background-color: #3b5998;
+}
+.facebook i:hover{
+color: white;
+}
+
+/*OFPPT style*/
+.ofppt:hover{
+background-color: #ffffff;
+}
+/*TWITTER style*/
+.twitter:hover{
+background-color: #1DA1F2;
+}
+.twitter i:hover{
+color: white;
+}
+/* Copyright text style */
+.footer-basic .copyright {
+margin-top:15px;
+text-align:center;
+font-size:13px;
+color:#aaa;
+}
